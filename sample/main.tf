@@ -1,13 +1,14 @@
 variable "environment" {
-    type = "string"
-    description = "The desired deployment enviornment name"
-    default = "dev"
+  type        = "string"
+  description = "The desired deployment enviornment name"
+  default     = "dev"
 }
 
 resource "azurerm_resource_group" "default" {
   name     = "terraform-pipelines-workshop-${var.enviornment}-rg"
   location = "West US"
 }
+
 resource "azurerm_app_service_plan" "default" {
   name                = "terraform-pippelines-workshop-plan"
   location            = "${azurerm_resource_group.default.location}"

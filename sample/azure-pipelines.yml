@@ -5,6 +5,8 @@ trigger:
 - master
 
 steps:
-- script: terraform fmt -check=true
+- script: |
+  cd sample
+  terraform fmt -check=true
 - script: cp ./sample/* $(Build.ArtifactStagingDirectory) -R
 - task: PublishBuildArtifacts@1
