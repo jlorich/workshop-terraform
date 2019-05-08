@@ -4,23 +4,18 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
 name: $(build.sourceBranchName)-$(Date:yyyyMMdd)$(Rev:.r)
+
 pool:
   vmImage: 'Ubuntu 16.04'
-
-variables:
-  imageName: '$(dockerId)/site'
 
 steps:
 - script: sed -i 's/#BUILD_ID#/$(build.buildNumber)/g' _includes/header.html
   displayName: 'update site with build number'
 
-- script: docker build -f Dockerfile -t $(imageName) .
+- script: docker build -f Dockerfile -t workshop --target build .
   displayName: 'docker build'
   
-- script: docker login -u $(dockerId) -p $(dockerPassword)
-  displayName: 'docker login'
+- script: docker cp workshop:/src/app/_site $(Build.ArtifactStagingDirectory)
+  displayName: 'Copy published files'
 
-- script: |
-        docker tag $(imageName) $(imageName):$(build.buildNumber)
-        docker push $(imageName):$(build.buildNumber)
-  displayName: 'docker push with build number'
+- task: PublishBuildArtifacts@1
