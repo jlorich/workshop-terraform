@@ -15,7 +15,9 @@ steps:
 - script: docker build -f Dockerfile -t workshop --target build .
   displayName: 'docker build'
   
-- script: docker cp workshop:/src/app/_site $(Build.ArtifactStagingDirectory)
+- script:  |
+  id=$(docker create workshop)
+  docker cp $id:/src/app/_site $(Build.ArtifactStagingDirectory)
   displayName: 'Copy published files'
 
 - task: PublishBuildArtifacts@1
