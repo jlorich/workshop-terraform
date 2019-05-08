@@ -39,6 +39,12 @@
         "label": "stop",
         "command": "docker kill debug_workshop_terraform",
         "type": "shell"
+      },
+      {
+        "label": "remove",
+        "command": "docker rm debug_workshop_terraform",
+        "type": "shell",
+        "dependsOn": "stop"
       }
     ]
   }

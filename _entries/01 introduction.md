@@ -10,8 +10,9 @@ Welcome to the Azure Pipelines Terraform Workshop.  In this lab you'll go throug
 
 Some of the things you'll be going through:
 
-- Setting up a basic pipeline to validate Terraform templates
-- Using Pipeline to deploy a terraform template
+- Create a basic Terraform template for deploying a website tn Azure
+- Use Azure Pipelines Pipelines to continuously validate Terraform templates
+- Use Azure Pipelines Pipeline to create Azure resources using Terraform
 - Integrating KeyVault into your build and release pipelines
 - Setting up a multi-environment deployment pipeline
 - Continuously deploying and configuring Kubernetes clusters
