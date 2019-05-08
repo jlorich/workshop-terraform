@@ -1,0 +1,9 @@
+pool:
+  vmImage: 'ubuntu-16.04'
+
+trigger: master
+
+steps:
+- script: terraform fmt -check=true
+- script: cp ./* $(Build.ArtifactStagingDirectory) -R
+- task: PublishBuildArtifacts@1
