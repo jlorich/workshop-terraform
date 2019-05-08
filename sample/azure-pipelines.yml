@@ -1,7 +1,8 @@
 pool:
   vmImage: 'ubuntu-16.04'
 
-trigger: master
+trigger:
+- master
 
 steps:
 - script: terraform fmt -check=true
