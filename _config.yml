@@ -1,6 +1,6 @@
 full_rebuild: true
-name: "The Azure Kubernetes Workshop"
-tracking: "aksworkshop"
+name: "The Azure DevOps Terraform Workshop"
+tracking: "terraformdevops"
 author: Microsoft
 encoding: utf-8
 defaults:

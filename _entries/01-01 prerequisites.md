@@ -5,9 +5,20 @@ title: Prerequisites
 parent-id: intro
 ---
 
-### Tools
 
-You can use the Azure Cloud Shell accessible at <https://shell.azure.com> once you login with an Azure subscription. The Azure Cloud Shell has the Azure CLI pre-installed and configured to connect to your Azure subscription as well as `kubectl` and `helm`.
+
+### Terraform
+
+Terraform is tool for deploying and managing Infrastructure (and more) as Code.  You can download the Terraform executables at <https://www.terraform.io/downloads.html>.  This lab will be using Terraform 0.11.13.
+
+
+### Azure CLI
+
+The Azure CLI is a command line interface for Azure.  The Azure CLI is also the way in which Terraform gains access to your Azure subscription.  You can find the installation instructions for the Azure CLI at <https://docs.microsoft.com/en-us/cli/azure/install-azure-cli>
+
+### Azure Cloud Shell
+
+You can also use the Azure Cloud Shell for this lab accessible at <https://shell.azure.com>.  The Azure Cloud Shell has the Azure CLI pre-installed and configured to connect to your Azure subscription as well as `helm`, `kubectl`, and `helm`.
 
 ### Azure subscription
 

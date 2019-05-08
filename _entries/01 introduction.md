@@ -1,17 +1,17 @@
 ---
 sectionid: intro
 sectionclass: h1
-title: The Azure Kubernetes Workshop
+title: Azure Pipelines Terraform Workshop
 type: nocount
 is-parent: yes
 ---
 
-Welcome to the Azure Kubernetes Workshop. In this lab, you'll go through tasks that will help you master the basic and more advanced topics required to deploy a multi-container application to Kubernetes on Azure Kubernetes Service (AKS).
+Welcome to the Azure Pipelines Terraform Workshop.  In this lab you'll go throught tasks tht will help you master the basics and more advanced topics required to deploy infrastructure in Azure with Terraform through Azure Pipelines.
 
-Some of the things you’ll be going through:
+Some of the things you'll be going through:
 
-- Kubernetes deployments, services and ingress
-- Deploying MongoDB using Helm
-- Azure Monitor for Containers, Horizontal Pod Autoscaler and the Cluster Autoscaler
-- Building CI/CD pipelines using Azure DevOps and Azure Container Registry
-- Scaling using Virtual Nodes, setting up SSL/TLS for your deployments, using Azure Key Vault for secrets
+- Setting up a basic pipeline to validate Terraform templates
+- Using Pipeline to deploy a terraform template
+- Integrating KeyVault into your build and release pipelines
+- Setting up a multi-environment deployment pipeline
+- Continuously deploying and configuring Kubernetes clusters
