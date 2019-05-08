@@ -10,7 +10,7 @@ resource "azurerm_resource_group" "default" {
 }
 
 resource "azurerm_app_service_plan" "default" {
-  name                = "terraform-pippelines-workshop-plan"
+  name                = "terraform-pipelines-workshop-plan"
   location            = "${azurerm_resource_group.default.location}"
   resource_group_name = "${azurerm_resource_group.default.name}"
   kind                = "Linux"
