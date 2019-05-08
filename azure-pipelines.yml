@@ -8,6 +8,9 @@ name: $(build.sourceBranchName)-$(Date:yyyyMMdd)$(Rev:.r)
 pool:
   vmImage: 'Ubuntu 16.04'
 
+trigger:
+  - master
+
 steps:
 - script: sed -i 's/#BUILD_ID#/$(build.buildNumber)/g' _includes/header.html
   displayName: 'update site with build number'
