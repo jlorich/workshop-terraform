@@ -1,3 +1,10 @@
+terraform {
+  backend "azurerm" {
+    container_name = "tfstate"
+    key            = "terraform-workshop.tfstate"
+  }
+}
+
 variable "environment" {
   type        = "string"
   description = "The desired deployment environment name"
