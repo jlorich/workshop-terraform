@@ -9,4 +9,5 @@
 /.brackets.json
 .DS_Store
 .terraform
-.tfstate
+*.tfstate
+*.tfstate.backup
